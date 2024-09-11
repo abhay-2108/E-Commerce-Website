@@ -1,3 +1,61 @@
+/* Navbar */
 .search {
-    width: 600px;
+    margin: 0 auto;
+    width: 50%;
+}
+
+.button {
+    margin-left: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.button:hover {
+    background-color: #1172da;
+}
+
+/* Updated Logo Class */
+.logo {
+    max-height: 50px; 
+    max-width: 10px; 
+    display: block; 
+    margin-left: 50px;
+}
+
+.login {
+    float: right;
+}
+
+.sign {
+    float: right;
+    margin-left: 10px; /* Adds space between the login and signup buttons */
+}
+
+.navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .navbar-collapse {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .search {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .button {
+        width: 100%;
+        margin-left: 0;
+        margin-top: 10px;
+    }
 }
