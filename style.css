@@ -59,55 +59,45 @@
         margin-top: 10px;
     }
 }
-/* Home logo  */
-
-/* .main {
-    position: relative;
-    width: 100%;
-    min-height: auto;
-  }
-  
-  .homologo {
-    position: relative;
-    top: 0;
-    right: 0;
-    width: 100vw; 
-    height: auto;
-    object-fit: cover;
-    z-index: 1;
-    display: block;
-  }
-  
-  .homecontent {
-    position: absolute;
-    top: 0; 
-    left: 0; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 1;
-    transition: 0.6s;
-    margin-top: 332px;
-    padding: 80px;
-    transform: translateY(-50%);
-    z-index: 2;
-    color: white;
-    font-size: 2rem;
-    background: rgba(0, 0, 0, 0.5); 
-    width: 100%; 
-    height: 100%;
-  } */
-  
-.info-button {
+/* navbar links    */
+.info-item {
     position: relative;
     margin: 20px;
-    justify-content: space-around;
+}
+.nav {
+    margin-right: 20px;
+    margin-left: 20px;
 }
 
+/* Main shooping  */
+
+.main {
+    margin-top: 20px;
+    display: flex;
+    padding-left: 200px;
+}
 .side-bar {
-    min-height: 1000px;
-    max-width: 200px;
-    background-color: rgb(238, 230, 230);
-    position: absolute;
+    position: fixed;
+    min-width: 200px;
+    height: 100vh;
+    background-color: #107eec;
+    left: 0;
+    top: 0;
+    padding-left: 0;
+    padding-right: 10px;
+    border-right: 1px solid #ccc;
+}
+.row {
+    flex: 1;
+    margin-left: 280px; 
+}
+
+@media (max-width: 1030px) {
+    .col-3 {
+        flex: 0 0 48%; 
+        max-width: 48%; 
+    }
+    .row {
+        width: 10rem;
+    }
 }
