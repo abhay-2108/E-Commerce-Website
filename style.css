@@ -62,7 +62,6 @@
 /* navbar links    */
 .container-fluid.info-button {
     position: relative;
-    /* margin: 15px; */
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(48, 47, 47, 0.1);
 }
@@ -71,12 +70,24 @@
     margin-left: 20px;
 }
 
-/* Main shooping  */
-
+/* Main shopping  */
+.col-2.slider {
+    margin-top: 46px;
+    margin-left: 30px;
+    height: 51.3rem;
+    border-radius: 7px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(48, 47, 47, 0.1);
+}
+.col-2 h4{
+    justify-content: center;
+}
 .container-fluid.main {
     display: flex;
     align-items: flex-start;
-    background-color: rgba(221, 224, 219, 0.322);
+    background-color: rgba(207, 202, 202, 0.452);
+    /* box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); */
+
 }
 .container-fluid.main.side-bar {
     border-radius: 2px;
@@ -95,7 +106,7 @@
 
 .card {
     margin-bottom: 15px; 
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 3px 5px rgba(7, 7, 7, 0.185);
     border: 1px solid #ddd;
 }
 .card-img-top{
@@ -107,12 +118,72 @@
 }
 
 /* Cards */
-@media (max-width: 1030px) {
-    .col-3 {
-        flex: 0 0 48%; 
-        max-width: 48%; 
+@media (min-width: 1400px) {
+    /* Extra-large screens */
+    .col-xxl-3 {
+      flex: 0 0 24%;
+      max-width: 24%; /* Cards take up 24% of the screen width */
     }
-    .row {
-        width: 10rem;
+  
+    .slider {
+      flex: 0 0 20%;
+      max-width: 20%; /* Sidebar takes up 20% of the width */
     }
-}
+  
+    .col-9 {
+      flex: 0 0 80%;
+      max-width: 80%; /* Cards section takes up 80% */
+    }
+  }
+  
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    /* Large screens */
+    .col-xl-4 {
+      flex: 0 0 30%;
+      max-width: 30%; /* Cards take up 30% of the width */
+    }
+  
+    .col-9 {
+      flex: 0 0 80%;
+      max-width: 80%; /* Cards section takes 80% */
+    }
+  }
+  
+  @media (min-width: 992px) and (max-width: 1199px) {
+    /* Medium screens */
+    .col-lg-3 {
+      flex: 0 0 30%;
+      max-width: 20%; /* Cards take up 30% of the width */
+    }
+  
+    .col-9 {
+      flex: 0 0 100%;
+      max-width: 100%; /* Cards section takes full width */
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 991px) {
+    /* Small screens */
+    .col-md-5 {
+      flex: 0 0 45%;
+      max-width: 45%; /* Cards take up 45% of the width, 2 cards per row */
+    }
+  
+    .col-9 {
+      flex: 0 0 100%;
+      max-width: 100%; /* Cards section takes full width */
+    }
+  }
+  
+  @media (max-width: 767px) {
+    /* Extra-small screens */
+    .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 100%; /* Cards take up 100% of the width */
+    }
+  
+    .col-9 {
+      flex: 0 0 100%;
+      max-width: 100%; /* Cards section takes full width */
+    }
+  }
