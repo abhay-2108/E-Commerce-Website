@@ -3,10 +3,9 @@
     margin: 0 auto;
     width: 50%;
 }
-
 .button {
     margin-left: 10px;
-    background-color: #007bff;
+    background-color: #ffffff;
     color: white;
     border: none;
     padding: 8px 16px;
@@ -15,8 +14,28 @@
     font-size: 16px;
 }
 
-.button:hover {
-    background-color: #1172da;
+.dark-icon{
+  color: #fff;
+  margin: 20px;
+  cursor: pointer;
+}
+.theme-icon {
+  transition: opacity 0.3s ease;
+  position: absolute;
+  width: 24px; 
+  height: 24px; 
+}
+
+.icon-moon, .icon-sun {
+  opacity: 0;
+}
+
+.icon-moon.active, .icon-sun.active {
+  opacity: 1;
+}
+
+.navbar {
+  position: relative; /* Ensure icons stack correctly */
 }
 
 /* Updated Logo Class */
@@ -25,6 +44,8 @@
     max-width: 10px; 
     display: block; 
     margin-left: 50px;
+    aspect-ratio: 3/2;
+    object-fit: contain;
 }
 
 .login {
@@ -61,9 +82,13 @@
 }
 /* navbar links    */
 .container-fluid.info-button {
+    height: 50px;
     position: relative;
     border: 1px solid #ddd;
     box-shadow: 0 2px 4px rgba(48, 47, 47, 0.1);
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
 }
 .nav {
     margin-right: 20px;
@@ -72,11 +97,12 @@
 
 /* Main shopping  */
 .col-2.slider {
-    margin-top: 46px;
+    margin-top: 60px;
     margin-left: 30px;
     height: 51.3rem;
     border-radius: 7px;
     background-color: white;
+    color: black;
     box-shadow: 0 2px 4px rgba(48, 47, 47, 0.1);
 }
 .col-2 h4{
@@ -91,6 +117,30 @@
 }
 .container-fluid.main.side-bar {
     border-radius: 2px;
+}
+.slider-container {
+  width: 250px;
+  margin: 20px;
+}
+
+.range-input {
+  width: 100%;
+  cursor: pointer;
+}
+#minPrice {
+  cursor: pointer;
+}
+
+.price-display {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+.slider p {
+  cursor: pointer;
+}
+.slider p:hover {
+  text-decoration: rgba(90, 88, 88, 0.644);
 }
 .row.cards {
     display: flex;
@@ -108,6 +158,7 @@
     margin-bottom: 15px; 
     box-shadow: 0 3px 5px rgba(7, 7, 7, 0.185);
     border: 1px solid #ddd;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .card-img-top{
     width: 100%;
@@ -186,4 +237,11 @@
       flex: 0 0 100%;
       max-width: 100%; /* Cards section takes full width */
     }
+  }
+
+  /* Animation */
+
+  .card:hover{
+    transform: translateY(-10px); 
+    box-shadow: 0 8px 16px rgba(7, 7, 7, 0.267);
   }
