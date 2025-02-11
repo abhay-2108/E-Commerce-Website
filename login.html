@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="login.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-collapse">
+                <a class="navbar-brand" href="#"><img src="img/logo.jpg" class="logo" alt="Logo"></a>
+                <div class="searchBtn">
+                    <input class="search-input" type="search" placeholder="Search for Products, Brands and more..."
+                        aria-label="Search">
+                    <button class="search-btn" type="submit">Search</button>
+                </div>
+                <div class="getIn">
+                    <button class="btn login" onclick="location.href='login.html'">Login</button>
+                    <button class="btn sign" onclick="location.href='signup.html'">Sign Up</button>
+                </div>
+                <img class="dark-icon" id="theme-toggle" src="img/moon.svg" alt="theme icon">
+            </div>
+        </div>
+    </nav>
+
+    <!-- Shopping Buttons -->
+    <div class="info-button">
+        <ul class="nav">
+            <li class="nav-item"><a href="#">Men</a></li>
+            <li class="nav-item"><a href="#">Women</a></li>
+            <li class="nav-item"><a href="#">Baby & Kids</a></li>
+            <li class="nav-item"><a href="#">Electronics</a></li>
+            <li class="nav-item"><a href="#">Home Appliances</a></li>
+        </ul>
+    </div>
+
+    <h1 class="brand">Apex Clothing</h1>
+    <div class="account">
+
+        <div class="imageSection">
+            <img src="img/loginImage.jpg" alt="Login Image">
+        </div>
+        <div class="details">
+            <h1>Login to Apex Clothing</h1>
+            <h3>Enter your details</h3>
+            <form action="login.php" method="POST" class="customer">
+                <input type="text" name="username" id="username" placeholder="Name" required>
+                <input type="password" name="password" id="password" placeholder="Password" required>
+                <div class="google">
+                    <button type="submit" class="btn1 log">Login</button>
+                    <button type="text" class="btn1">Forget Password?</button>
+                </div>
+            </form>
+            <p>Don't have an account? <a href="#" onclick="goToSignup()">Sign Up</a></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-section">
+                <h6>ABOUT</h6>
+                <a href="#">Contact Us</a>
+                <a href="#">About Us</a>
+                <a href="#">Careers</a>
+                <a href="#">Press</a>
+                <a href="#">Corporate Information</a>
+            </div>
+            <div class="footer-section">
+                <h6>PRODUCTS</h6>
+                <a href="#">Angular</a>
+                <a href="#">React</a>
+                <a href="#">Vue</a>
+                <a href="#">Laravel</a>
+            </div>
+            <div class="footer-section">
+                <h6>USEFUL LINKS</h6>
+                <a href="#">Pricing</a>
+                <a href="#">Settings</a>
+                <a href="#">Orders</a>
+                <a href="#">Help</a>
+            </div>
+            <div class="footer-section">
+                <h6>CONTACT</h6>
+                <p>New York, NY 10012, US</p>
+                <p>Email: info@example.com</p>
+                <p>Phone: +01 234 567 88</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>© 2024 Your Company. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="#"><i class="fab fa-facebook"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    function goToSignup() {
+        window.location.href = "signup.html";
+    }
+</script>
+
+</html>
