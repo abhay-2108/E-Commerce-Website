@@ -1,463 +1,137 @@
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="dark">
+<html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-commerce Website</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>E-commerce Website</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-                <a class="navbar-brand" href="#"><img src="img/logo.jpg" class="img-fluid logo" alt="Logo"></a>
-                <form class="d-flex search ml-9" role="search">
-                    <input class="form-control me-2" type="search" placeholder="Search for Products, Brands and more..." aria-label="Search">
-                    <button class="btn " type="submit">Search</button>
-                </form>
-                <button class="btn login" onclick="location.href='login.html'">Login</button>
-                <button class="btn  sign" onclick="location.href='signup.html'">Sign Up</button>
-                <!-- Theme Toggle Button -->
-                <img class="dark-icon" id="theme-toggle" src="img/moon.svg" alt="theme icon" style="cursor: pointer;">
-            </div>
-        </div>
-    </nav>
-      
-      <!-- Main Content -->
-      <div id="carouselExampleCaptions" class="carousel slide">
-        <div class="carousel-indicators">
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-          <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-        </div>
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <img src="img/main_logo.avif" class="d-block w-100" alt="First slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>Some representative placeholder content for the first slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/logo.jpg" class="d-block w-100" alt="Second slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Second slide label</h5>
-              <p>Some representative placeholder content for the second slide.</p>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <img src="img/homologo.jpg" class="d-block w-100" alt="Third slide">
-            <div class="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
-              <p>Some representative placeholder content for the third slide.</p>
-            </div>
-          </div>
-        </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container-fluid">
+      <div class="navbar-collapse">
+        <a class="navbar-brand" href="#"><img src="img/logo.jpg" class="logo" alt="Logo"></a>
+        <div class="searchBtn">
+        <input class="search-input" type="search" placeholder="Search for Products, Brands and more..."
+          aria-label="Search">
+        <button class="search-btn" type="submit">Search</button>
       </div>
-      
-      <!-- Shopping Buttons -->
-      <div class="container-fluid info-button ">
-          <ul class="nav justify-content-center mb-20">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">Men</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Women</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Baby and Kid's</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Electronics</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home Appliances</a>
-            </li>
-          </ul>
+      <div class="getIn">
+        <button class="btn login" onclick="location.href='login.html'">Login</button>
+        <button class="btn sign" onclick="location.href='signup.html'">Sign Up</button>
       </div>
+        <img class="dark-icon" id="theme-toggle" src="img/moon.svg" alt="theme icon">
+      </div>
+    </div>
+  </nav>
 
-      <!-- Product Cards -->
-<div class="container-fluid main">
-  <div class="row">
-    <!-- Sidebar -->
-    <div class="col-2 slider">
-        <h5 class="m-3 ">Filters</h5>
-        <hr>
-        <h6 class="m-3">Categories</h6>
-        <p class="m-3 ">Clothing</p> 
-        <p class="m-3">Mobiles</p>
-        <p class="m-3">Gadgets</p>
-        <hr>
-        <h5 class="m-3">Price</h5>
+  <!-- Carousel Container -->
+  
+  
 
-        <div class="slider-container">
-          <input type="range" class="range-input" id="priceRange" min="0" max="30000" step="100" value="15000" oninput="updatePriceDisplay()">
-          <div class="price-display">
-              <div class="price-box">
-                  <select id="minPrice">
-                      <option value="Min">Min</option>
-                      <option value="5000">₹5000</option>
-                      <option value="10000">₹10000</option>
-                      <option value="20000">₹20000</option>
-                  </select>
-              </div>
-          </div>
+  <!-- Shopping Buttons -->
+  <div class="info-button">
+    <ul class="nav">
+      <li class="nav-item"><a href="#">Men</a></li>
+      <li class="nav-item"><a href="#">Women</a></li>
+      <li class="nav-item"><a href="#">Baby & Kids</a></li>
+      <li class="nav-item"><a href="#">Electronics</a></li>
+      <li class="nav-item"><a href="#">Home Appliances</a></li>
+    </ul>
+  </div>
+
+  <!-- Product Sections -->
+  <div class="main">
+    <div class="sidebar">
+      <h5>Filters</h5>
+      <h6>Categories</h6>
+      <p>Clothing</p>
+      <p>Mobiles</p>
+      <p>Gadgets</p>
+      <hr>
+      <h5>Price</h5>
+      <div class="slider-container">
+        <input type="range" class="range-input" id="priceRange" min="0" max="30000" step="100" value="15000">
+        <div class="price-display">
+          <select id="minPrice">
+            <option value="Min">Min</option>
+            <option value="5000">₹5000</option>
+            <option value="10000">₹10000</option>
+            <option value="20000">₹20000</option>
+          </select>
+        </div>
       </div>
       <hr>
-      <p class="m-3">Cart </p>
-      <p class="m-3">24 x 7 Customer Care </p>
-      <p class="m-3">Become a Seller </p>
-      <p class="m-3">Discount</p>
-      <p class="m-3">Offer Zone</p>
-      <p class="m-3">Saved Address </p>
-      <hr>
+      <p>Cart</p>
+      <p>24 x 7 Customer Care</p>
+      <p>Become a Seller</p>
+      <p>Discount</p>
+      <p>Offer Zone</p>
+      <p>Saved Address</p>
     </div>
-    
-    <!-- Cards Section -->
-    <div class="col-9 ">
-      <h4 class="mt-3">Men's Clothing</h4>
-      <div class="row cards justify-content-space-evenly">
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/pant1.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
 
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/jacket.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
+    <div class="content">
+      <h4>Men's Clothing</h4>
+      <div class="product-cards" id="men-cards-container"></div>
 
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/shirt.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
+      <h4>Women's Clothing</h4>
+      <div class="product-cards" id="women-cards-container"></div>
 
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/pant2.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/shirt2.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/pant4.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/suit1.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/shirt3.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-      </div>
+      <h4>Kid's Section</h4>
+      <div class="product-cards" id="kids-cards-container"></div>
     </div>
   </div>
-</div>
 
-<div class="container-fluid main">
-  <div class="row">
-    <!-- Sidebar -->
-    <div class="col-2">
-      <!-- <div class="slide-bar">
-        <h4>Side Bar</h4>
-      </div> -->
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-container">
+        <div class="footer-section">
+            <h6>ABOUT</h6>
+            <a href="#">Contact Us</a>
+            <a href="#">About Us</a>
+            <a href="#">Careers</a>
+            <a href="#">Press</a>
+            <a href="#">Corporate Information</a>
+        </div>
+        <div class="footer-section">
+            <h6>PRODUCTS</h6>
+            <a href="#">Angular</a>
+            <a href="#">React</a>
+            <a href="#">Vue</a>
+            <a href="#">Laravel</a>
+        </div>
+        <div class="footer-section">
+            <h6>USEFUL LINKS</h6>
+            <a href="#">Pricing</a>
+            <a href="#">Settings</a>
+            <a href="#">Orders</a>
+            <a href="#">Help</a>
+        </div>
+        <div class="footer-section">
+            <h6>CONTACT</h6>
+            <p>New York, NY 10012, US</p>
+            <p>Email: info@example.com</p>
+            <p>Phone: +01 234 567 88</p>
+        </div>
     </div>
-    
-    <!-- Cards Section -->
-    <div class="col-9 ">
-      <h4 class="mt-2">Women's Clothing</h4>
-      <div class="row cards justify-content-space-evenly ml-4">
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/suitf1.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
+    <div class="footer-bottom">
+        <p>© 2024 Your Company. All rights reserved.</p>
+        <div class="social-icons">
+            <a href="#"><i class="fab fa-facebook"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            <a href="#"><i class="fab fa-github"></i></a>
         </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/kurtis.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/kurtis2.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/saree1.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/saree2.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/kurtis3.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/top.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xxl-3 col-xl-4 col-lg-4 col-md-5 justify-content-space-evenly">
-          <div class="card" style="width: auto; height: 27rem; margin-bottom: 20px;margin-top: 10px;">
-            <img src="img/kurtis4.webp" class="card-img-top" alt="">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">View</a>
-            </div>
-          </div>
-        </div>
-      </div>
     </div>
-  </div>
-</div>
-
-
-
-    <!-- Footers -->
-<footer class="text-center text-lg-start bg-body-tertiary text-muted">
-  <!-- Section: Social media -->
-  <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
-
-    <!-- Right -->
-    <div>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-facebook-f"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-twitter"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-google"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-instagram"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-linkedin"></i>
-      </a>
-      <a href="" class="me-4 text-reset">
-        <i class="fab fa-github"></i>
-      </a>
-    </div>
-    <!-- Right -->
-  </section>
-  <!-- Section: Social media -->
-
-  <!-- Section: Links  -->
-  <section class="">
-    <div class="container text-center text-md-start mt-5">
-      <!-- Grid row -->
-      <div class="row mt-3">
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-          <!-- Content -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            <i class="fas fa-gem me-3"></i>Company name
-          </h6>
-          <p>
-            Here you can use rows and columns to organize your footer content. Lorem ipsum
-            dolor sit amet, consectetur adipisicing elit.
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Products
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Angular</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">React</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Vue</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Laravel</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">
-            Useful links
-          </h6>
-          <p>
-            <a href="#!" class="text-reset">Pricing</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Settings</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Orders</a>
-          </p>
-          <p>
-            <a href="#!" class="text-reset">Help</a>
-          </p>
-        </div>
-        <!-- Grid column -->
-
-        <!-- Grid column -->
-        <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-          <!-- Links -->
-          <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-          <p><i class="fas fa-home me-3"></i> New York, NY 10012, US</p>
-          <p>
-            <i class="fas fa-envelope me-3"></i>
-            info@example.com
-          </p>
-          <p><i class="fas fa-phone me-3"></i> + 01 234 567 88</p>
-          <p><i class="fas fa-print me-3"></i> + 01 234 567 89</p>
-        </div>
-        <!-- Grid column -->
-      </div>
-      <!-- Grid row -->
-    </div>
-  </section>
 </footer>
-    <!-- Script Link -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 
-    <script>
-      const themeToggleButton = document.getElementById('theme-toggle');
-      const htmlElement = document.documentElement;
 
-      themeToggleButton.addEventListener('click', () => {
-          const currentTheme = htmlElement.getAttribute('data-bs-theme');
-          
-          const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-          htmlElement.setAttribute('data-bs-theme', newTheme);
-
-          if (newTheme === 'dark') {
-              themeToggleButton.src = 'img/moon.svg'; // Change to moon icon
-              themeToggleButton.alt = 'Moon icon for dark theme';
-          } else {
-              themeToggleButton.src = 'img/sun.svg'; // Change to sun icon
-              themeToggleButton.alt = 'Sun icon for light theme';
-          }
-      });
-  </script>
+  <!-- JavaScript for Carousel Effect -->
+  <script src="script.js"></script>
 </body>
+
 </html>
