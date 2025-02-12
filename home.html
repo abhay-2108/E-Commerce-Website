@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>E-commerce Website</title>
-  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="header.css">
+  <link rel="stylesheet" href="home.css">
   <link rel="stylesheet" href="footer.css">
 </head>
 
@@ -17,22 +17,25 @@
       <div class="navbar-collapse">
         <a class="navbar-brand" href="#"><img src="img/logo.jpg" class="logo" alt="Logo"></a>
         <div class="searchBtn">
-        <input class="search-input" type="search" placeholder="Search for Products, Brands and more..."
-          aria-label="Search">
-        <button class="search-btn" type="submit">Search</button>
+          <input class="search-input" type="search" placeholder="Search for Products, Brands and more..."
+            aria-label="Search">
+          <button class="search-btn" type="submit">Search</button>
+        </div>
+        <div class="getIn">
+          <button class="btn login" onclick="location.href='login.html'">Login</button>
+          <button class="btn sign" onclick="location.href='signup.html'">Sign Up</button>
+        </div>
+        <div class="cart-container">
+          <img class="cart" id="cart-icon" src="img/cart.svg" alt="Cart">
+          <span class="cart-badge" id="cart-count">0</span>
       </div>
-      <div class="getIn">
-        <button class="btn login" onclick="location.href='login.html'">Login</button>
-        <button class="btn sign" onclick="location.href='signup.html'">Sign Up</button>
-      </div>
-        <img class="dark-icon" id="theme-toggle" src="img/moon.svg" alt="theme icon">
+      
+      
+
+        <img class="dark-icon" id="theme-toggle" src="" alt="">
       </div>
     </div>
   </nav>
-
-  <!-- Carousel Container -->
-  
-  
 
   <!-- Shopping Buttons -->
   <div class="info-button">
@@ -66,7 +69,6 @@
           </select>
         </div>
       </div>
-      <hr>
       <p>Cart</p>
       <p>24 x 7 Customer Care</p>
       <p>Become a Seller</p>
@@ -84,52 +86,56 @@
 
       <h4>Kid's Section</h4>
       <div class="product-cards" id="kids-cards-container"></div>
+
+      <h4>New Arrival's</h4>
+      <div class="product-cards" id="arrivals-cards-container"></div>
+      
     </div>
   </div>
 
   <!-- Footer -->
   <footer class="footer">
     <div class="footer-container">
-        <div class="footer-section">
-            <h6>ABOUT</h6>
-            <a href="#">Contact Us</a>
-            <a href="#">About Us</a>
-            <a href="#">Careers</a>
-            <a href="#">Press</a>
-            <a href="#">Corporate Information</a>
-        </div>
-        <div class="footer-section">
-            <h6>PRODUCTS</h6>
-            <a href="#">Angular</a>
-            <a href="#">React</a>
-            <a href="#">Vue</a>
-            <a href="#">Laravel</a>
-        </div>
-        <div class="footer-section">
-            <h6>USEFUL LINKS</h6>
-            <a href="#">Pricing</a>
-            <a href="#">Settings</a>
-            <a href="#">Orders</a>
-            <a href="#">Help</a>
-        </div>
-        <div class="footer-section">
-            <h6>CONTACT</h6>
-            <p>New York, NY 10012, US</p>
-            <p>Email: info@example.com</p>
-            <p>Phone: +01 234 567 88</p>
-        </div>
+      <div class="footer-section">
+        <h6>ABOUT</h6>
+        <a href="#">Contact Us</a>
+        <a href="#">About Us</a>
+        <a href="#">Careers</a>
+        <a href="#">Press</a>
+        <a href="#">Corporate Information</a>
+      </div>
+      <div class="footer-section">
+        <h6>PRODUCTS</h6>
+        <a href="#">Angular</a>
+        <a href="#">React</a>
+        <a href="#">Vue</a>
+        <a href="#">Laravel</a>
+      </div>
+      <div class="footer-section">
+        <h6>USEFUL LINKS</h6>
+        <a href="#">Pricing</a>
+        <a href="#">Settings</a>
+        <a href="#">Orders</a>
+        <a href="#">Help</a>
+      </div>
+      <div class="footer-section">
+        <h6>CONTACT</h6>
+        <p>New York, NY 10012, US</p>
+        <p>Email: info@example.com</p>
+        <p>Phone: +01 234 567 88</p>
+      </div>
     </div>
     <div class="footer-bottom">
-        <p>© 2024 Your Company. All rights reserved.</p>
-        <div class="social-icons">
-            <a href="#"><i class="fab fa-facebook"></i></a>
-            <a href="#"><i class="fab fa-twitter"></i></a>
-            <a href="#"><i class="fab fa-instagram"></i></a>
-            <a href="#"><i class="fab fa-linkedin"></i></a>
-            <a href="#"><i class="fab fa-github"></i></a>
-        </div>
+      <p>© 2024 Your Company. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#"><i class="fab fa-facebook"></i></a>
+        <a href="#"><i class="fab fa-twitter"></i></a>
+        <a href="#"><i class="fab fa-instagram"></i></a>
+        <a href="#"><i class="fab fa-linkedin"></i></a>
+        <a href="#"><i class="fab fa-github"></i></a>
+      </div>
     </div>
-</footer>
+  </footer>
 
 
   <!-- JavaScript for Carousel Effect -->
