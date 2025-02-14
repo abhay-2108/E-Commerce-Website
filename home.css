@@ -12,7 +12,7 @@
   position: absolute;
   top: -5px;
   right: -5px;
-  background: #ff0000;
+  background: red;
   color: white;
   font-size: 12px;
   font-weight: bold;
@@ -20,11 +20,11 @@
   border-radius: 50%;
   min-width: 20px;
   text-align: center;
-  display: none; /* Hides initially */
+  display: none; /* Initially hidden */
 }
 
 .cart-badge.show {
-  display: flex;  /* Makes it visible */
+  display: flex;
   justify-content: center;
   align-items: center;
   animation: pop 0.3s ease-in-out;
@@ -34,6 +34,7 @@
   0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
+
 
 
 .main {
@@ -111,6 +112,93 @@
   border-color: #ff6f00;
   outline: none;
 }
+
+
+/* Collapsible Sidebar for Tablets */
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 25%;
+  }
+
+  .content {
+    width: 75%;
+  }
+}
+
+/* Sidebar Toggle for Small Screens */
+@media (max-width: 768px) {
+  .info-button {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .nav {
+    flex-direction: row;
+    width: 100%;
+  }
+  .sidebar {
+    margin-top: 60px;
+    position:absolute;
+    top: 0;
+    left: -120%;
+    max-width: 50%;
+    height: 100vh;
+    background: white;
+    box-shadow: 4px 0 8px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease-in-out;
+    z-index: 1000;
+    padding: 20px;
+    overflow-y: auto;
+  }
+
+  .sidebar.open {
+    left: 0;
+  }
+
+  .sidebar-toggle {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    background: #ff6f00;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 1100;
+    transition: background 0.3s;
+  }
+
+  .sidebar-toggle:hover {
+    background: #e65100;
+  }
+
+  .content {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .sidebar {
+    width: 80%;
+  }
+  .info-button {
+    width: 100%;
+    align-items: center;
+  }
+
+  .nav {
+    flex-direction: row;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .nav-item a {
+    font-size: 14px;
+  }
+}
+
 
 
 /* Product Cards Section */
