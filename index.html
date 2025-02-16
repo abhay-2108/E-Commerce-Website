@@ -15,7 +15,7 @@
   <nav class="navbar">
     <div class="container-fluid">
       <div class="navbar-collapse">
-        <a class="navbar-brand" href="#"><img src="img/logo.jpg" class="logo" alt="Logo"></a>
+        <a class="navbar-brand" href="#" onclick="goToHome()"><img src="img/logo.jpg" class="logo" alt="Logo"></a>
         <div class="searchBtn">
           <input class="search-input" type="search" placeholder="Search for Products, Brands and more..." aria-label="Search">
           <button class="search-btn" type="submit">Search</button>
@@ -142,6 +142,9 @@
         }
       });
     });
+    function goToHome() {
+      window.location.href = "home.html";
+    }
   </script>
 
   <script src="script.js"></script>
