@@ -9,6 +9,9 @@ This project is a fully responsive e-commerce website designed to provide a seam
 - **Responsive Design:** Optimized for desktops, tablets, and mobile devices.
 - **User Experience:** Clean, modern layout with intuitive navigation and smooth transitions.
 
+  ![image](https://github.com/user-attachments/assets/5ae4aed4-c962-40d5-868e-2b453b6858da)
+
+
 ## Technologies Used
 
 - **HTML5 & CSS3:** Structure and styling of the website.
